@@ -1,0 +1,25 @@
+﻿<Window x:Class="FinalProjectApp.Leaderboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalProjectApp"
+        mc:Ignorable="d"
+        Title="Leaderboard" Height="450" Width="800">
+    <Grid>
+        <Rectangle>
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#2FD38E" Offset="0.0" />
+                    <GradientStop Color="#60E69D" Offset="0.22" />
+                    <GradientStop Color="#7DCA8E" Offset="0.40" />
+                    <GradientStop Color="#AAD08C" Offset="0.5" />
+                    <GradientStop Color="white" Offset="1.0" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="79" Background="White" Click="Return"/>
+        <DataGrid x:Name ="DataGrid1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="214,156,203,156"/>
+        <Button Content="Load Data" HorizontalAlignment="Left" Margin="377,283,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+    </Grid>
+</Window>
